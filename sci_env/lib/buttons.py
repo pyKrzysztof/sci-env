@@ -285,9 +285,9 @@ class ConfigColorSwitcher(wx.Control):
         self.Draw(dc)
         
     def Draw(self, dc):
-        dc.SetBackground(wx.Brush(self.conf.Get('menuColor')))
-        dc.SetTextForeground(self.conf.Get('textColor'))
-        dc.SetFont(self.conf.Get('regFont', True))
+        dc.SetBackground(wx.Brush(self.conf.get_color('menu')))
+        dc.SetTextForeground(self.conf.get_color('text'))
+        dc.SetFont(self.conf.get_font('small'))
         dc.Clear()
         
         width, height = self.GetClientSize()
@@ -302,10 +302,10 @@ class ConfigColorSwitcher(wx.Control):
         dc.DrawText(self.label, (textX, textY))
                                  
         if self._mouseIn:
-            dc.SetPen(wx.Pen(self.conf.Get('highlightColor'), width=1))
+            dc.SetPen(wx.Pen(self.conf.get_color('highlight'), width=1))
             dc.DrawLine((textX, textHeight+5), (textX+textWidth, textHeight+5))        
 
-        dc.SetPen(wx.Pen(self.conf.Get('borderColor'), width=2))
+        dc.SetPen(wx.Pen(self.conf.get_color('border'), width=2))
         dc.SetBrush(wx.Brush(self.color))
         dc.DrawRectangle((width - height), 0, height, height)
 

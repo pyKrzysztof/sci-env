@@ -23,8 +23,7 @@ class SciFrame(wx.Frame):
 		self.set_config(config.Config())
 		self.window_manager = WindowManager(self, self.config)
 
-		sizer = wx.BoxSizer(wx.VERTICAL)
-		self.SetSizer(sizer)
-		self.Layout()
-
+		self.sizer = wx.BoxSizer(wx.VERTICAL)
 		self.window_manager.init_windows()
+		self.SetSizer(self.sizer)
+		self.Layout()

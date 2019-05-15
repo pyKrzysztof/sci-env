@@ -3,7 +3,6 @@ import os
 
 
 
-
 def read_theme(name):
 	"""Used to read theme file."""
 

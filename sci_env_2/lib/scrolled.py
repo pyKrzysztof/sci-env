@@ -1,4 +1,5 @@
 import wx
+import math
 
 
 class ScrollWin(wx.ScrolledWindow):
@@ -45,7 +46,7 @@ class ScrolledPanel(ScrollWin):
         self.Bind(wx.EVT_CHILD_FOCUS, self.OnChildFocus)
 
 
-    def SetupScrolling(self, scroll_x=True, scroll_y=True, rate_x=20, rate_y=20,
+    def setup_scrolling(self, scroll_x=True, scroll_y=True, rate_x=20, rate_y=20,
                        scrollToTop=True, scrollIntoView=True):
         """
         This function sets up the event handling necessary to handle

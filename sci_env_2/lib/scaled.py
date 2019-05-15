@@ -26,18 +26,18 @@ class ScaledStaticText(wx.Control):
         if self.bgColor:
             dc.SetBackground(wx.Brush(self.bgColor))
         elif self.conf:
-            dc.SetBackground(wx.Brush(self.conf.Get('menuColor')))
+            dc.SetBackground(wx.Brush(self.conf.get_color('menu')))
         dc.Clear()
         
         if self.font:
             dc.SetFont(self.font)
         elif self.conf:
-            dc.SetFont(self.conf.Get('regFont', True))
+            dc.SetFont(self.conf.get_font('small'))
             
         if self.color:
             dc.SetTextForeground(self.color)
         elif self.conf:
-            dc.SetTextForeground(self.conf.Get('textColor'))
+            dc.SetTextForeground(self.conf.get_color('text'))
 
         width, height = self.GetClientSize()
         textWidth, textHeight = dc.GetTextExtent(self.label)

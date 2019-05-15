@@ -51,7 +51,7 @@ class SciPanelButtons(wx.Panel):
     def __init__(self, parent, current, manager, config):
         super(wx.Panel, self).__init__(parent)
         
-        self.config = conf
+        self.config = config
         self.manager = manager
         
         self.display()
@@ -68,7 +68,7 @@ class SciPanelButtons(wx.Panel):
                 
             for butt in self.panelButtons:
                 butt.isActive = False
-            if not self.manager._menuOpen:
+            if not self.manager.menu_open:
                 button.isActive = True
                 self.manager.switch_to(button.idx)
                 return
@@ -83,12 +83,12 @@ class SciPanelButtons(wx.Panel):
         self.sizer = wx.GridBagSizer(0, 0)
         self.menuButt = MenuButton(self, self.config, name='menu', size=(40, 40))
         self.panelButtons = [
-            PanelButton(self, self.conf, 'Panel I', idx=0, size=(120, 40)),
-            PanelButton(self, self.conf, 'Panel II', idx=1, size=(120, 40)),
-            PanelButton(self, self.conf, 'Panel III', idx=2, size=(120, 40)),
-            PanelButton(self, self.conf, 'Panel IV', idx=3, size=(120, 40)),
-            PanelButton(self, self.conf, 'Panel V', idx=4, size=(120, 40)),
-            PanelButton(self, self.conf, 'Panel VI', idx=5, size=(120, 40))]
+            PanelButton(self, self.config, 'Panel I', idx=0, size=(120, 40)),
+            PanelButton(self, self.config, 'Panel II', idx=1, size=(120, 40)),
+            PanelButton(self, self.config, 'Panel III', idx=2, size=(120, 40)),
+            PanelButton(self, self.config, 'Panel IV', idx=3, size=(120, 40)),
+            PanelButton(self, self.config, 'Panel V', idx=4, size=(120, 40)),
+            PanelButton(self, self.config, 'Panel VI', idx=5, size=(120, 40))]
         self.sizer.Add(self.menuButt, pos=(0, 0), flag=wx.EXPAND)
         for index, button in enumerate(self.panelButtons):
             self.sizer.Add(button, pos=(0, index+1), flag=wx.EXPAND)

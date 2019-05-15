@@ -11,5 +11,5 @@ class Application(wx.App):
 			from wx.lib.inspection import InspectionTool
 			InspectionTool().Show()
 
-		frame = SciFrame(None, title='SciEnv', size=(1050, 650))
+		frame = SciFrame(None, title='SciEnv', size=(1075, 650))
 		frame.Show()
