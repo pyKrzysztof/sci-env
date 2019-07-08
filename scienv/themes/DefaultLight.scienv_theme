@@ -1,0 +1,16 @@
+[APP COLORS]
+Text = #0f0f0f
+Panel = #f7edd4
+Menu = #ffffff
+Border = #434343
+Button = #7f7f00
+Select = #b6b600
+Highlight = #e1e100
+Inactive = #8b8577
+
+[WIDGET COLORS]
+Text: #000000
+Frame: #353535
+Color1: #cccccc
+Color2: #232323
+Color3: #000000
