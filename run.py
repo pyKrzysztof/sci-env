@@ -1,4 +1,4 @@
-import sci_env_2
+import scienv
 
 
 app = sci_env_2.Application()

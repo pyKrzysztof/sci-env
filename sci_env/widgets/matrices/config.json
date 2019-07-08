@@ -1,7 +1,0 @@
-{
-	"name": "Matrix Multiplication",
-	"matrixFont": "wx.Font(13, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)",
-    "description_title": "Matrix Multiplication Widget",
-    "version": "1.0",
-    "author": "Christopher Pilate"
-}
